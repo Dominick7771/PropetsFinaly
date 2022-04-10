@@ -1,0 +1,21 @@
+.header {
+    height: 7vh;
+    background-color: var(--bs-dark-green);
+}
+
+.btnSign {
+    width: 112px;
+    height: 33px;
+    border: 1px solid var(--bs-white);
+    border-radius: 17px;
+    opacity: 1;
+    background-color: var(--bs-dark-green);
+    color: var(--bs-white);
+    font-size: 16px;
+}
+
+.btnSign:hover {
+    background-color: var(--bs-yellow);
+    color: var(--bs-black);
+    border: 1px solid var(--bs-dark-green);
+}

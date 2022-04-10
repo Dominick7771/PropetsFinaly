@@ -1,0 +1,7 @@
+.box{
+    width: 650px;
+    height: 390px;
+    background: var(--bs-white) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px var(--bs-grey);
+    opacity: 1;
+}

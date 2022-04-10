@@ -1,0 +1,24 @@
+.tagline {
+    height: 260px;
+    background-color: var(--bs-dark-green);
+}
+
+.tagline p {
+    font-size: 32px;
+    width: 55%;
+    color: var(--bs-white);
+}
+
+@media screen and (max-width: 992px) {
+
+    .tagline p {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .tagline p {
+        font-size: 17px;
+    }
+}

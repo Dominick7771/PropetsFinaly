@@ -1,0 +1,1 @@
+export const googleConfig = process.env.REACT_APP_GOOGLE_MAP_KEY

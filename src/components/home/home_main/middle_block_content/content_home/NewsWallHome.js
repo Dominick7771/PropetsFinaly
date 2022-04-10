@@ -1,0 +1,36 @@
+import React, {useEffect, useState} from 'react';
+import style from '../../../../../css_moduls/home_css/home.module.css';
+import PostCard from "./PostCard";
+import {useDispatch} from "react-redux";
+import {collection, getDocs, query} from "firebase/firestore";
+import {db} from "../../../../../utils/firebase";
+
+const NewsWallHome = () => {
+
+    const dispatch = useDispatch()
+    const [base, setBase] = useState([])
+    const baseCollectionRefTree = query(collection(db, "post"));
+
+    function sortObject(field) {
+        return (a, b) => a[field] < b[field] ? 1 : -1;
+    }
+
+    useEffect(() => {
+        dispatch({type: "SET_MAP_ACTIVE", payload: {map: false, header: false}})
+        const getBase = async () => {
+            const data = await getDocs(baseCollectionRefTree)
+            setBase(data.docs.map(doc => ({...doc.data(), id: doc.id})).sort(sortObject('Date')));
+        }
+        getBase()
+    }, [])
+
+    return (
+        <div className={`${style.mainWhiteBack} d-flex flex-column col-6 align-items-center overflow-auto`}>
+            {base.map((user, index) => {
+                return <PostCard user={user} key={index}/>
+            })}
+        </div>
+    );
+};
+
+export default NewsWallHome;

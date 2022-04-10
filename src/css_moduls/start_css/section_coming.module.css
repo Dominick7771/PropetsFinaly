@@ -1,0 +1,52 @@
+.widthInfo {
+    width: 66%;
+}
+
+.colorSection {
+    background-color: var(--bs-red);
+}
+
+.pLove {
+    color: var(--bs-white);
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    width: 50px;
+    left: 40px;
+    bottom: 72px;
+}
+
+.logoLove {
+    height: 110px;
+}
+
+.aboutStyle {
+    color: var(--bs-white);
+    font-size: 56px;
+    font-weight: 500;
+}
+
+.textStyle {
+    color: var(--bs-white);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 992px) {
+    .aboutStyle {
+        font-size: 32px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .logoLove {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+    .widthInfo {
+        width: 100%;
+    }
+}

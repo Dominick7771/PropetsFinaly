@@ -1,0 +1,60 @@
+.heightFooter {
+    min-height: 190px;
+}
+
+.footerLogo {
+    width: 200px;
+}
+
+footer {
+    background-color: var(--bs-dark-green);
+}
+
+.imgSize {
+    width: 16px;
+    height: 16px;
+}
+
+.heightBlock {
+    height: 70px;
+    margin-right: 10px;
+}
+
+.heightLinks {
+    height: 80px;
+}
+
+.widthSocial {
+    width: 222px;
+}
+
+.widthLinks {
+    min-width: 210px;
+}
+
+.justifyContent {
+    justify-content: space-between;
+}
+
+.colorWhite {
+    color: var(--bs-white);
+}
+
+.heightLinks a {
+    text-decoration: none;
+}
+
+.smallerText{
+    font-size: 12px;
+}
+
+.smallText{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 500px) {
+    .justifyContent {
+        justify-content: center;
+    }
+}

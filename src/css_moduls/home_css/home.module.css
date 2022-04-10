@@ -1,0 +1,518 @@
+nav {
+    margin-bottom: 100px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.heightHeader {
+    height: 7vh;
+    box-shadow: 0px 3px 6px var(--bs-grey);
+    opacity: 1;
+}
+
+.heightMain {
+    height: 93vh;
+}
+
+.logoHeader {
+    filter: invert(59%) sepia(4%) saturate(2660%) hue-rotate(106deg) brightness(94%) contrast(79%);
+}
+
+.btnHeader {
+    width: 148px;
+    height: 34px;
+    background-color: var(--bs-green);
+    border: var(--bs-light-green) 1px solid;
+    border-radius: 17px;
+    color: var(--bs-white);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.iconBtn {
+    width: 16px;
+    height: 16px;
+    filter: invert(100%) sepia(13%) saturate(75%) hue-rotate(74deg) brightness(118%) contrast(100%);
+}
+
+.iconBtnBlack {
+    width: 16px;
+    height: 16px;
+}
+
+.mainGreenBack {
+    background-color: var(--bs-green);
+    box-shadow: 0px 3px 6px var(--bs-grey) inset;
+}
+
+.mainWhiteBack {
+    background-color: transparent;
+}
+
+.navBtn {
+    background-color: transparent;
+    border: none;
+    height: 24px;
+    font-size: 16px;
+    color: var(--bs-white);
+}
+
+.gorizontLine {
+    border: 1px var(--bs-white) solid;
+    opacity: 0.3;
+    width: 80%;
+}
+
+.aColor {
+    color: var(--bs-white);
+}
+
+.dropdownContainer {
+    background-color: var(--bs-dark-green);
+    border-radius: 0 20px 20px 0;
+}
+
+.widthImg {
+    width: 19px;
+}
+
+.imgUser {
+    width: 35px;
+    height: 35px;
+}
+
+.avatarImg {
+    height: 43px;
+    width: 43px;
+    padding: 0;
+}
+
+.imgUser,
+.avatarImg {
+    overflow: hidden;
+    border: 1px var(--bs-white) solid;
+    border-radius: 50%;
+}
+
+.imgUser img {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.avatarImg img {
+    display: block;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.picturePost img {
+    width: 49%;
+    margin: 0.5%;
+}
+
+.btnLogout {
+    color: #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.titleBold {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--bs-dark-green);
+}
+
+.titleBigBold {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bs-green);
+}
+
+.titleSemiBold {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--bs-dark-green);
+    margin: 0;
+}
+
+.smallerText {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--bs-ligth-grey);
+}
+
+.smallerTextBlack {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--bs-black);
+}
+
+.smallerTextGreen {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--bs-green);
+}
+
+.smallerTextBlack {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--bs-black);
+}
+
+.textPost {
+    height: 50px;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--bs-black);
+    text-align: justify;
+    text-indent: 1.5em;
+}
+
+.textPostOpen {
+    overflow: visible;
+    height: auto;
+    white-space: normal;
+
+}
+
+.postCard {
+    min-width: 90%;
+    box-shadow: 0px 3px 6px var(--bs-grey);
+    margin: 2%;
+    padding: 1%;
+}
+
+.postCardTitle {
+    margin: 2%;
+    padding: 1%;
+    min-width: 90%;
+
+}
+
+.greenLink {
+    color: var(--bs-green);
+    font-size: 12px;
+    text-decoration: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.starBtn {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    filter: invert(79%) sepia(0%) saturate(77%) hue-rotate(209deg) brightness(98%) contrast(83%);
+}
+
+.dotsBtn {
+    cursor: pointer;
+    height: 19px;
+    width: 21px;
+    filter: invert(79%) sepia(0%) saturate(77%) hue-rotate(209deg) brightness(98%) contrast(83%);
+}
+
+.dropdownContentGreen {
+    display: none;
+    position: fixed;
+    left: 60.5%;
+    top: 12.5%;
+    justify-content: space-evenly;
+    background-color: var(--bs-dark-green);
+    min-width: 130px;
+    min-height: 70px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.lostFoundForm {
+    box-shadow: 0px 3px 6px var(--bs-grey);
+    margin: 2%;
+    padding: 1%;
+}
+
+.select {
+    width: 77px;
+    height: 18px;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--bs-black);
+}
+
+.anketImg {
+    height: 183px;
+    width: 192px;
+}
+
+textarea {
+    width: 206px;
+    border: 1px solid var(--bs-light-green);
+    resize: none;
+}
+
+.smallTextarea {
+    height: 46px;
+}
+
+.middleTextarea {
+    height: 52px;
+}
+
+.bigTextarea {
+    height: 118px;
+}
+
+.biggestTextarea {
+    width: 527px;
+    height: 400px;
+}
+
+.littleGreenText {
+    margin: 0;
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--bs-green);
+}
+
+.littleGreyText {
+    font-size: 10px;
+    color: var(--bs-ligth-grey);
+    font-weight: 500;
+    margin: 0;
+}
+
+.addFileIcon {
+    height: 30px;
+    width: 30px;
+    filter: invert(71%) sepia(10%) saturate(860%) hue-rotate(106deg) brightness(96%) contrast(86%);
+}
+
+.divInput {
+    margin: 0;
+    padding: 0;
+}
+
+.addFileInput {
+    width: 127px;
+    height: 111px;
+    border: 1px solid var(--bs-light-green);
+    margin: 0;
+}
+
+.addFileInput::-webkit-file-upload-button {
+    visibility: hidden;
+    width: 0.01%;
+    margin: 0;
+    padding: 0;
+}
+
+.addFileLabel {
+    width: 77px;
+    height: 30px;
+    border: 1px solid var(--bs-light-green);
+    border-radius: 15px;
+    opacity: 1;
+    background-color: transparent;
+    color: var(--bs-green);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.hrLine {
+    border: 0.5px var(--bs-ligth-grey) solid;
+    opacity: 0.3;
+    margin: 10px 0;
+}
+
+.titleSemiBoldGreen {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--bs-green);
+}
+
+.imgPreview {
+    width: 100%;
+}
+
+.imgPreviewPost {
+    width: 120%;
+}
+
+.suggestions {
+    background: #fff;
+    border: 2px solid rgba(32, 32, 32);
+    width: 100%;
+    z-index: 10;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.listItem {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.listItem:hover {
+    background: #efefef;
+}
+
+.btnEdit {
+    width: 105px;
+    height: 34px;
+    background-color: transparent;
+    border: var(--bs-light-green) 1px solid;
+    border-radius: 17px;
+    color: var(--bs-green);
+    font-size: 12px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.btnEdit:hover {
+    color: var(--bs-green);
+}
+
+.editIcon {
+    height: 16px;
+    width: 18px;
+    filter: invert(71%) sepia(10%) saturate(860%) hue-rotate(106deg) brightness(96%) contrast(86%);
+}
+
+.blockBtns {
+    height: 7%;
+    width: 100%;
+}
+
+.blockMap {
+    background-color: var(--bs-green);
+    border-radius: 15px 0px 0px 0px;
+    height: 93%;
+    width: 100%;
+}
+
+.blockWall {
+    background-color: var(--bs-white);
+    height: 93%;
+    width: 100%;
+}
+
+.searchBtn {
+    background-color: transparent;
+    border: var(--bs-light-green) 1px solid;
+    border-radius: 15px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--bs-green);
+    text-align: left;
+}
+
+.smallBtn {
+    width: 145px;
+}
+
+.middleBtn {
+    width: 226px;
+}
+
+.bigBtn {
+    width: 337px;
+}
+
+.shadow {
+    box-shadow: 0px 3px 6px var(--bs-grey);
+}
+
+.mapMarker {
+    width: 13px;
+    height: 13px;
+    filter: invert(69%) sepia(26%) saturate(324%) hue-rotate(106deg) brightness(94%) contrast(91%);
+    margin-right: 3px;
+}
+
+.contactsBtn {
+    width: 18px;
+    height: 18px;
+    filter: invert(82%) sepia(0%) saturate(1114%) hue-rotate(162deg) brightness(92%) contrast(91%);
+}
+
+.contactsBtnFb {
+    width: 20px;
+    height: 20px;
+    filter: invert(82%) sepia(0%) saturate(1114%) hue-rotate(162deg) brightness(92%) contrast(91%);
+}
+
+.buttonsStyle {
+    min-width: 96%;
+}
+
+.buttonsStyle > button {
+    height: 34px;
+    background-color: var(--bs-green);
+    color: var(--bs-white);
+    opacity: 0.28;
+    border: 1px solid var(--bs-green);
+}
+
+.active {
+    background-color: var(--bs-green) !important;
+    opacity: 1 !important;
+}
+
+.iconEditName {
+    width: 14px;
+    height: 14px;
+    filter: invert(82%) sepia(0%) saturate(1114%) hue-rotate(162deg) brightness(92%) contrast(91%);
+}
+
+.inputEditName {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--bs-dark-green);
+    margin: 0;
+    border: none;
+    width: 200px;
+}
+
+.cameraDiv {
+    background-color: var(--bs-white);
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    box-shadow: 0px 3px 6px var(--bs-grey);
+    left: 35px;
+    top: 25px;
+    padding: 0;
+    text-align: center;
+}
+
+.cameraImg {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 6px;
+    filter: invert(81%) sepia(12%) saturate(707%) hue-rotate(106deg) brightness(84%) contrast(84%);
+}
+
+.photoInput {
+    visibility: hidden;
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+}

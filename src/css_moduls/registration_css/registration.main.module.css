@@ -1,0 +1,63 @@
+.buttonsStyle > button {
+    width: 311px;
+    height: 34px;
+    background-color: var(--bs-green);
+    color: var(--bs-white);
+    opacity: 0.28;
+    border: 1px solid var(--bs-green);
+}
+
+.active {
+    background-color: var(--bs-green) !important;
+    opacity: 1 !important;
+}
+label {
+    font-size: 12px;
+    color: var(--bs-black);
+}
+
+input {
+    width: 204px;
+    height: 18px;
+    border: transparent;
+    border-bottom: 1px solid var(--bs-green);
+    background-color: transparent;
+    margin-left: 10px;
+    color: var(--bs-ligth-grey);
+    font-size: 12px;
+}
+
+.textPwd > p {
+    font-size: 10px;
+    color: var(--bs-ligth-grey);
+    margin: 0;
+}
+.forgotPwd > a{
+    font-size: 10px;
+    color: var(--bs-ligth-grey);
+}
+
+.heightFormRegister {
+    height: 163px;
+}
+
+.heightFormAuth {
+    height: 114px;
+}
+
+.heightFooter {
+    height: 70px;
+}
+
+.marginInForm {
+    margin-bottom: 10px;
+}
+
+.marginUpForm {
+    margin-bottom: 9px;
+}
+
+.errorText {
+    font-size: 12px;
+    color: var(--bs-red);
+}

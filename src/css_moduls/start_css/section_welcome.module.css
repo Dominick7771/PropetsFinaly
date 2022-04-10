@@ -1,0 +1,103 @@
+.dogImg {
+    max-width: 100%;
+}
+
+.colorSpanText {
+    color: var(--bs-green);
+    font-size: 56px;
+}
+
+.pText {
+    font-size: 56px;
+    font-weight: 500;
+}
+
+.welcomeTextSize {
+    width: 486px;
+    padding-top: 60px;
+}
+
+.btnLostPet,
+.btnFoundPet {
+    height: 93px;
+    border-radius: 0 50px 50px 0;
+    display: block;
+    position: absolute;
+    border: 0;
+    left: 0;
+}
+
+.btnLostPet {
+    background-color: var(--bs-yellow);
+    top: 420px;
+    width: 32%;
+}
+
+.btnFoundPet {
+    background-color: var(--bs-green);
+    top: 513px;
+    width: 27%;
+}
+
+.search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 72%;
+    margin-left: auto;
+}
+
+.btnSpan {
+    color: var(--bs-black);
+    font-size: 32px;
+}
+
+.btnSpanWhite{
+    color: var(--bs-white);
+    font-size: 32px;
+}
+
+.btnFoundPet span {
+    margin-left: 20%;
+}
+
+.search img {
+    position: relative;
+    top: 8px;
+    right: -7px;
+}
+
+.join {
+    text-transform: uppercase;
+    text-decoration: underline;
+    color: var(--bs-green);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.pJoin {
+    margin-bottom: 26px;
+    font-size: 16px;
+}
+
+.justifyContent {
+    justify-content: space-between;
+}
+
+.marginBottom {
+    margin-bottom: 68px;
+}
+
+
+
+@media screen and (max-width: 992px) {
+
+    .btnLostPet,
+    .btnFoundPet {
+        display: none;
+    }
+
+    .justifyContent {
+        justify-content: center;
+    }
+}

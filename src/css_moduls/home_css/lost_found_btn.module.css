@@ -1,0 +1,37 @@
+.btnFound,
+.btnLost{
+    width: 148px;
+    height: 34px;
+    border-radius: 17px;
+    font-size: 12px;
+    display: flex;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.btnFound {
+    background-color: var(--bs-green);
+    border: var(--bs-light-green) 1px solid;
+    color: var(--bs-white);
+}
+
+.btnLost {
+    background-color: var(--bs-yellow);
+    border: var(--bs-ligth-yellow) 1px solid;
+    color: var(--bs-black);
+}
+
+.btnLost:hover {
+    color: var(--bs-black)
+}
+
+.iconBtn {
+    width: 16px;
+    height: 16px;
+}
+
+.iconBtnDark {
+    width: 16px;
+    height: 16px;
+    filter: invert(18%) sepia(34%) saturate(0%) hue-rotate(144deg) brightness(87%) contrast(82%);
+}

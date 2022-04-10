@@ -1,0 +1,56 @@
+.agreeText {
+    font-size: 10px;
+    color: var(--bs-ligth-grey);
+    width: 294px;
+    height: 33px;
+    margin: 0;
+}
+
+.agreeText > a {
+    color: inherit;
+}
+
+.btnCancel {
+    width: 105px;
+    height: 34px;
+    background-color: transparent;
+    border: var(--bs-light-green) 1px solid;
+    border-radius: 17px;
+    color: var(--bs-green);
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.btnCancel:hover {
+    color: var(--bs-green);
+}
+
+.btnSubmit {
+    width: 148px;
+    height: 34px;
+    background-color: var(--bs-green);
+    border: var(--bs-light-green) 1px solid;
+    border-radius: 17px;
+    color: var(--bs-white);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.btnSubmitUnavailable {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+.paw {
+    width: 16px;
+    height: 16px;
+}
+
+hr {
+    border: var(--bs-ligth-grey) 1px solid;
+}
+
+.heightFooter {
+    height: 60px;
+}

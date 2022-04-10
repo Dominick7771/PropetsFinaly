@@ -1,0 +1,32 @@
+.heightSection {
+    height: 450px;
+}
+
+.sizeH2 {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--bs-green);
+}
+
+.sizeUl {
+    width: 540px;
+    list-style-type: none;
+}
+
+.sizeLi {
+    font-size: 18px;
+    line-height: 35px;
+}
+
+.sizeLi:before {
+    content: "\2B24";
+    color: var(--bs-green);
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 450px) {
+
+    .sizeUl {
+        width: 360px;
+    }
+}
