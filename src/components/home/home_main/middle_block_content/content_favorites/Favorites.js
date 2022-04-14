@@ -6,6 +6,7 @@ import {db} from "../../../../../utils/firebase";
 import PostCard from "../content_home/PostCard";
 import {sortObject} from "../../../../../utils/utils";
 import Loading from "../../../../Loading";
+import PostCardFavirites from "../content_home/PostCardFavorites";
 
 const Favorites = () => {
 
@@ -33,7 +34,7 @@ const Favorites = () => {
 
     return (
         <div className={`${style.mainWhiteBack} d-flex flex-column col-6 align-items-center overflow-auto`}>
-            {posts.map((user, index) => <PostCard user={user} key={index}/>)}
+            {posts.map((user, index) => <PostCardFavirites user={user} key={index}/>)}
         </div>
     );
 };
