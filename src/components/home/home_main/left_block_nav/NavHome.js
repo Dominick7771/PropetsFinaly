@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import style from '../../../../css_moduls/home_css/home.module.css';
 import homeImg from '../../../../assets/png/home.png';
 import lostImg from '../../../../assets/png/lost_black.png';
@@ -21,6 +21,10 @@ const NavHome = () => {
     const auth = getAuth()
     let user = localStorage.getItem('user')
     let initial = JSON.parse(user)
+
+    useEffect(() => {
+
+    },[isLoad])
 
     const logOut = () => {
         signOut(auth)
