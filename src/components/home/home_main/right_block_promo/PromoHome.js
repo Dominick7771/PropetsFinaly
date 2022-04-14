@@ -10,7 +10,6 @@ import {googleConfig} from "../../../../utils/google";
 import Map from "../../../../maps/Map";
 import {collection, getDocs} from "firebase/firestore";
 import {db} from "../../../../utils/firebase";
-
 const libraries = ['places']
 
 const PromoHome = () => {
@@ -46,10 +45,9 @@ const PromoHome = () => {
 
     const map = useSelector(state => state.map)
 
-    if (map.map === false) {
+    if(map.map === false) {
         return (
-            <div
-                className={`${style.mainGreenBack} d-flex flex-column col-3 justify-content-start pb-2 pt-2 align-items-end`}>
+            <div className={`${style.mainGreenBack} d-flex flex-column col-3 justify-content-start pb-2 pt-2 align-items-end`}>
                 <img className={`m-auto`} src={img_dental_care} alt={'dental_care'}/>
                 <img className={`m-auto`} src={img_pet_hotel} alt={'pet_hotel'}/>
                 <img className={`m-auto`} src={img_pet_hotel_2} alt={'pet_hotel_2'}/>
@@ -60,10 +58,7 @@ const PromoHome = () => {
             <div className={`d-flex flex-column col-3 pb-2 pt-2`}>
                 <div className={`${style.blockBtns}`}>
                     <input placeholder='Location' className={`${style.searchBtn} ${style.smallBtn}`}
-                           onChange={e => {
-                               e.preventDefault();
-                               dispatch({type: 'SET_FILTER_LOCATION', payload: e.target.value})
-                           }}/>
+                           onChange={e => dispatch({type: 'SET_FILTER_LOCATION', payload: e.target.value})}/>
                 </div>
                 <div className={`${style.blockMap} pt-3 ps-2`}>
                     <div className={`w-100 h-100`}>
