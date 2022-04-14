@@ -5,6 +5,7 @@ import {collection, getDocs, query, getDoc, doc} from "firebase/firestore";
 import {db} from "../../../../../utils/firebase";
 import PostCard from "../content_home/PostCard";
 import {sortObject} from "../../../../../utils/utils";
+import Loading from "../../../../Loading";
 
 const Favorites = () => {
 

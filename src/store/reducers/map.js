@@ -4,6 +4,7 @@ const initialState = {
     finish: false,
     edit: false,
     dropdown: false,
+    isLoading: false,
     location: '',
 }
 
@@ -17,6 +18,8 @@ export default (state = initialState, {type, payload}) => {
             return {...state, dropdown: payload.dropdown}
         case 'SET_FILTER_LOCATION':
             return {...state, location: payload}
+        case 'SET_STATUS_LOADING':
+            return {...state, isLoading: payload}
         default:
             return state
     }

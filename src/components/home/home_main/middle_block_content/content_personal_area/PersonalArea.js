@@ -12,6 +12,7 @@ import {getDownloadURL, ref, uploadBytesResumable} from "firebase/storage";
 import {v4 as uuidv4} from "uuid";
 import PostCard from "../content_home/PostCard";
 import {sortObject} from "../../../../../utils/utils";
+import Loading from "../../../../Loading";
 
 const PersonalArea = () => {
 
@@ -40,20 +41,21 @@ const PersonalArea = () => {
     }
 
     const uploadFiles = (file) => {
-            if (!file) return
-            const storageRef = ref(storage, `/avatar/${uuidv4()}`)
-            const uploadTask = uploadBytesResumable(storageRef, file)
+        if (!file) return
+        const storageRef = ref(storage, `/avatar/${uuidv4()}`)
+        const uploadTask = uploadBytesResumable(storageRef, file)
 
-            uploadTask.on('state_changed', (snapshot) => {},
-                (err) => console.log(err),
-                () => {
-                    getDownloadURL(uploadTask.snapshot.ref)
-                        .then(url => {
-                            setImage(url)
-                            setButton(false)
-                        })
+        uploadTask.on('state_changed', (snapshot) => {
+            },
+            (err) => console.log(err),
+            () => {
+                getDownloadURL(uploadTask.snapshot.ref)
+                    .then(url => {
+                        setImage(url)
+                        setButton(false)
+                    })
 
-                })
+            })
     }
 
     const addUserInfo = () => {
@@ -80,7 +82,6 @@ const PersonalArea = () => {
     const updateStorage = () => {
         localStorage.setItem('user', JSON.stringify(auth.currentUser))
         localStorage.setItem('userInfo', JSON.stringify(obj))
-        setButton(true)
     }
 
     useEffect(() => {
@@ -89,8 +90,8 @@ const PersonalArea = () => {
         addUserInfo()
     }, [userName, email, phone, facebook, image])
 
-    useEffect(()=> {
-        const getBase = async ()=> {
+    useEffect(() => {
+        const getBase = async () => {
             const data = await getDocs(baseCollectionMyPosts)
             setBase(data.docs.map(doc => ({...doc.data(), id: doc.id})).sort(sortObject("Date")))
         }
@@ -118,7 +119,8 @@ const PersonalArea = () => {
                             </div>
                             <div className={`${style.avatarImg} col-1 `}>
                                 <label htmlFor={'photoInput'}><img src={initial.photoURL} alt={''}/></label>
-                                <input className={`${style.photoInput}`} onChange={formHandler} type={'file'} id={'photoInput'}
+                                <input className={`${style.photoInput}`} onChange={formHandler} type={'file'}
+                                       id={'photoInput'}
                                        name={'photoInput'} multiple accept={'image/*, image/jpeg'}/>
                             </div>
                             <div className={`col-10 d-flex flex-row`}>
@@ -143,22 +145,22 @@ const PersonalArea = () => {
                         <div className={`mb-5`}>
                             <label className={`${style.smallerTextBlack} col-2 text-end`} htmlFor="fbLink">FB
                                 link:</label>
-                            <input className={'col-6'} type="text" placeholder="https://www.facebook.com/helenjohnson" name="fbLink"
+                            <input className={'col-6'} type="text" placeholder="https://www.facebook.com/helenjohnson"
+                                   name="fbLink"
                                    value={facebook}
                                    onChange={e => setFacebook(e.target.value)}/>
-                        </div>
-                        <div className={button ? `d-none` : `d-block`}>
-                            <h1 className={`${style.smallerTextBlack} col-4 text-start`}>The photo is loading. Save changes...</h1>
                         </div>
                     </div>
                     <div className={`d-flex justify-content-end ${style.postCardTitle}`}>
                         <NavLink to='/home' className={`${style.btnEdit} me-2`}>
                             <span className={'m-auto'}>Cancel</span>
                         </NavLink>
-                        <button className={`${style.btnHeader}`} onClick={updateStorage}>
-                            <img className={`${style.iconBtn}`} src={save} alt={''}/>
-                            <span className={'m-auto'}>Save changes</span>
-                        </button>
+                        {button ?
+                            <Loading/> :
+                            <button className={`${style.btnHeader}`} onClick={updateStorage}>
+                                <img className={`${style.iconBtn}`} src={save} alt={''}/>
+                                <span className={'m-auto'}>Save changes</span>
+                            </button>}
                     </div>
                 </>
                 :

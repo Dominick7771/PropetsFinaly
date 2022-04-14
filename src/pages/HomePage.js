@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import HomeHeader from "../components/home/home_header/HomeHeader";
 import MainHome from "../components/home/home_main/middle_block_content/content_home/MainHome";
 import {getAuth, onAuthStateChanged, updateProfile} from "firebase/auth";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {doc, getDoc, setDoc} from "firebase/firestore";
 import {db} from "../utils/firebase";
 
@@ -10,6 +10,7 @@ const HomePage = () => {
 
     const auth = getAuth();
     const userReg = useSelector(state => state.registration)
+    const dispatch = useDispatch()
     let userInfo = localStorage.getItem('user')
     let initial = JSON.parse(userInfo)
 
@@ -42,8 +43,10 @@ const HomePage = () => {
                 uid: initial.uid
             });
             localStorage.setItem('userInfo', JSON.stringify({email: '', phone: '', facebook: '', uid: initial.uid}))
+            dispatch({type: 'SET_STATUS_LOADING', payload: true})
         } else {
             localStorage.setItem('userInfo', JSON.stringify(userInfoSnap.data()))
+            dispatch({type: 'SET_STATUS_LOADING', payload: true})
         }
     }
 

@@ -9,11 +9,13 @@ import logout from '../../../../assets/png/logout.png';
 import ElementList from "./ElementList";
 import DropMenu from "./DropMenu";
 import {Link, NavLink, useHistory} from "react-router-dom";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {getAuth, signOut} from "firebase/auth";
+import Loading from "../../../Loading";
 
 const NavHome = () => {
 
+    const isLoad = useSelector(state => state.map.isLoading)
     const dispatch = useDispatch()
     const {push} = useHistory()
     const auth = getAuth()
@@ -55,12 +57,18 @@ const NavHome = () => {
             </nav>
             <div>
                 <div className={`${style.gorizontLine} m-auto mb-3`}/>
-                <Link to={'/personalarea'} className={`${style.aColor} d-flex align-items-center col-5 m-auto mb-5 text-decoration-none`}
-                         onClick={() => dispatch({type: 'SET_DROPDOWN', payload: {dropdown: false}})}>
-                    <div className={`${style.imgUser} me-2`}><img src={initial.photoURL} alt={'avatar'}/></div>
-                    <div className={`d-flex flex-wrap w-25`}>
-                        <span className={`m-0`}>{initial.displayName}</span>
-                    </div>
+                <Link to={'/personalarea'}
+                      className={`${style.aColor} d-flex align-items-center col-5 m-auto mb-5 text-decoration-none`}
+                      onClick={() => dispatch({type: 'SET_DROPDOWN', payload: {dropdown: false}})}>
+                    {isLoad ?
+                        <>
+                            <div className={`${style.imgUser} me-2`}><img src={initial.photoURL} alt={'avatar'}/></div>
+                            <div className={`d-flex flex-wrap w-25`}>
+                                <span className={`m-0`}>{initial.displayName}</span>
+                            </div>
+                        </>
+                        :
+                        <Loading/>}
                 </Link>
                 <div className={`col-5 m-auto mb-3`}>
                     <a className={`${style.btnLogout} mb-3`} onClick={() => logOut()}>
